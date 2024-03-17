@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: silver;
+            font-size: 42px;
+            color:red; 
+        }
+    </style>
+</head>
+<body>
+    <p font-color="red" font-size="42px">-----MENU-----<br>
+6-wyświetlanie teorii o operatorach<br>
+29-czy luczba należy do przedziału (-5;3)<br>
+58-czy liczba należy do przedziału (-oo;5) lub [100;oo)
+    </p>
+    <script>
+        var imie = "Michał";
+        var nazwisko = "Duszyński";
+        var liczba1 = imie.length;
+        var liczba2 = liczba1 + 7;
+        var liczba3 = nazwisko.length;
+        var liczba4 = liczba3 + 4;
+        document.write("Moje nazwisko to: Michał Duszyński<br>")
+        document.write(imie + " = " + liczba1 + "<br>");
+		document.write("imie + 7 = " +liczba2 + "<br>");
+		document.write(nazwisko + " = " + liczba3 + "<br>");
+		document.write("nazwisko + 4 = " +liczba4 + "<br>");
+
+
+        var opcja_dusz = parseInt(prompt("Wybierz opcję (6, 29 lub 68):"));
+        if (opcja_dusz != 6 && opcja_dusz != 29 && opcja_dusz != 68 ){
+        document.write("<font> nie ma takiej opcji</font><br>");}
+        else if (opcja_dusz == 6) 
+            document.write("<font color=blue size=7>Jesteś w opcja 6 --> teoria</font>"+"<br>");
+            document.write("<font color=green size=3>&& i x=3 y=4 (x < 9 && y > 2) wynik -> prawda"+"<br>"+"|| lub x=3 y=4 (x==8 || y==6) wynik->fałsz"+"<br>"+"! zaprzeczenie x=3 y=4 !(x==y) wynik->prawda</font><br>")
+
+          if (opcja_dusz == 29) 
+            document.write("<font color=blue size=7>Jesteś w opcja 29 --> przedział</font>"+"<br>");
+            var x_dusz=prompt("wczytaj liczbe x=","");
+            if(x_dusz>=-5 && x_dusz<3) 
+            document.write("<font color=green size=42px>liczba należy do przedziału</font>"+"<br>");
+        else
+        document.write("<font color=green size=42px>liczba nie należy do przedziału</font>"+"<br>");
+
+
+         if (opcja_dusz == 68) 
+            document.write("<font color=blue size=7>Jesteś w opcja 68 --> przedział</font>"+"<br>");
+            var y_dusz=prompt("wczytaj liczbe y=","");
+            if(y_dusz>=5 && y_dusz<=100) 
+            document.write("<font color=green size=42px>liczba należy do przedziału</font>"+"<br>");
+        else
+        document.write("<font color=green size=42px>liczba nie należy do przedziału</font>"+"<br>");
+         
+    
+    </script>
+    <div id="output"></div>
+</body>
+</html>
